@@ -37,6 +37,7 @@ export const usePollCoreFarmData = () => {
   const { fastRefresh } = useRefresh()
 
   useEffect(() => {
+    // TODO we might add Lucky token pid here
     dispatch(fetchFarmsPublicDataAsync([251, 252]))
   }, [dispatch, fastRefresh])
 }
@@ -99,6 +100,18 @@ export const usePriceBnbBusd = (): BigNumber => {
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
+  const cakeBnbFarm = useFarmFromPid(251)
+  return new BigNumber(cakeBnbFarm.token.busdPrice)
+}
+
+export const usePriceLuckyBusd = (): BigNumber => {
+  // TODO Change to lucky token
+  // const farm = useFarmFromPid(xxx)
+  return usePriceBnbBusd();
+}
+
+export const usePriceLionBusd = (): BigNumber => {
+  // TODO Change to lion token
   const cakeBnbFarm = useFarmFromPid(251)
   return new BigNumber(cakeBnbFarm.token.busdPrice)
 }

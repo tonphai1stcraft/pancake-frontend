@@ -36,13 +36,13 @@ export const fetchFarmsPublicDataAsync = createAsyncThunk<Farm[], number[]>(
     const farmsWithPriceHelpers = farmsToFetch.concat(priceHelperLpsConfig)
 
     const farms = await fetchFarms(farmsWithPriceHelpers)
+    console.log('farmsWithoutHelperLps', farmsWithPriceHelpers);
     const farmsWithPrices = await fetchFarmsPrices(farms)
 
     // Filter out price helper LP config farms
     const farmsWithoutHelperLps = farmsWithPrices.filter((farm: Farm) => {
       return farm.pid || farm.pid === 0
     })
-
     return farmsWithoutHelperLps
   },
 )

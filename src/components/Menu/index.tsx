@@ -1,9 +1,10 @@
 import React from 'react'
-import { Menu as UikitMenu } from '@pancakeswap/uikit'
+// import { Menu as UikitMenu } from '@pancakeswap/uikit'
+import { Menu as UikitMenu } from '@1stcraft/uikit'
 import { languageList } from 'config/localization/languages'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
-import { usePriceCakeBusd } from 'state/farms/hooks'
+import { usePriceCakeBusd, usePriceLuckyBusd } from 'state/farms/hooks'
 import { useProfile } from 'state/profile/hooks'
 import config from './config'
 import UserMenu from './UserMenu'
@@ -11,6 +12,7 @@ import UserMenu from './UserMenu'
 const Menu = (props) => {
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
+  const luckyPriceUsd = usePriceLuckyBusd();
   const { profile } = useProfile()
   const { currentLanguage, setLanguage, t } = useTranslation()
 
@@ -22,7 +24,8 @@ const Menu = (props) => {
       currentLang={currentLanguage.code}
       langs={languageList}
       setLang={setLanguage}
-      cakePriceUsd={cakePriceUsd.toNumber()}
+      cakePriceUsd={luckyPriceUsd.toNumber()}
+      cake2PriceUsd={luckyPriceUsd.toNumber()}
       links={config(t)}
       profile={{
         username: profile?.username,
