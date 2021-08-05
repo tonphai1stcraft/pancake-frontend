@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  luckylion.fe:
+    container_name: luckylion.fe
+    image: nginx:1.13.0-alpine
+    restart: always
+    networks:
+      luckylion: {}
+    ports:
+      - "80:80"
+    volumes:
+      - ./build/:/usr/share/nginx/html
+networks:
+  luckylion:
