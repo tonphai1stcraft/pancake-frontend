@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, Button, Input, Flex, Grid } from '@pancakeswap/uikit'
+import { Text, Button, Input, Flex, Grid } from '@1stcraft/uikit'
 import { useTranslation } from 'contexts/Localization'
 import QuestionHelper from '../../QuestionHelper'
 import { AutoColumn } from '../../Layout/Column'

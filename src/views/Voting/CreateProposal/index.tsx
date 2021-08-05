@@ -13,7 +13,7 @@ import {
   LinkExternal,
   Text,
   useModal,
-} from '@pancakeswap/uikit'
+} from '@1stcraft/uikit'
 import { useHistory } from 'react-router'
 import { useWeb3React } from '@web3-react/core'
 import times from 'lodash/times'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex } from '@pancakeswap/uikit'
+import { Flex } from '@1stcraft/uikit'
 import styled from 'styled-components'
 import Hero from './components/Hero'
 import Footer from './components/Footer'

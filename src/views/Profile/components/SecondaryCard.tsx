@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text } from '@pancakeswap/uikit'
+import { Text } from '@1stcraft/uikit'
 
 const SecondaryCard = styled(Text)`
   border: 2px solid ${({ theme }) => theme.colors.tertiary};
