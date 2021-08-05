@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 // eslint-disable-next-line import/no-unresolved
-import { PancakeTheme } from '@pancakeswap/uikit/dist/theme'
+import { PancakeTheme } from '@1stcraft/uikit/dist/theme'
 
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
@@ -12,8 +12,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Kanit', sans-serif;
   }
   body {
-    background-color: ${({ theme }) => theme.colors.background};
-
+    background: ${({ theme }) => theme.colors.background};
+    background-color: white;
     img {
       height: auto;
       max-width: 100%;

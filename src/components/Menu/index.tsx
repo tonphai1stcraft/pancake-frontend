@@ -19,12 +19,12 @@ const Menu = (props) => {
   return (
     <UikitMenu
       userMenu={<UserMenu />}
-      isDark={isDark}
+      isDark
       toggleTheme={toggleTheme}
       currentLang={currentLanguage.code}
       langs={languageList}
       setLang={setLanguage}
-      cakePriceUsd={luckyPriceUsd.toNumber()}
+      cakePriceUsd={cakePriceUsd.toNumber()}
       cake2PriceUsd={luckyPriceUsd.toNumber()}
       links={config(t)}
       profile={{
