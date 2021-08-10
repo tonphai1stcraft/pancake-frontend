@@ -8,6 +8,7 @@ import { usePriceCakeBusd, usePriceLuckyBusd } from 'state/farms/hooks'
 import { useProfile } from 'state/profile/hooks'
 import config from './config'
 import UserMenu from './UserMenu'
+import GlobalSettings from './GlobalSettings'
 
 const Menu = (props) => {
   const { isDark, toggleTheme } = useTheme()
@@ -19,6 +20,7 @@ const Menu = (props) => {
   return (
     <UikitMenu
       userMenu={<UserMenu />}
+      globalMenu={<GlobalSettings />}
       isDark={isDark}
       toggleTheme={toggleTheme}
       currentLang={currentLanguage.code}

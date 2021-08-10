@@ -8,9 +8,9 @@ import IconCard, { IconCardData } from '../IconCard'
 import StatCardContent from './StatCardContent'
 import GradientLogo from '../GradientLogoSvg'
 
-// Values fetched from bitQuery effective 28/7/21
-const txCount = 30673865
-const addressCount = 1966700
+// Values fetched from bitQuery effective 6/8/21
+const txCount = 38392695
+const addressCount = 2319694
 
 const Stats = () => {
   const { t } = useTranslation()
@@ -26,20 +26,14 @@ const Stats = () => {
 
   const UsersCardData: IconCardData = {
     icon: <CommunityIcon color="secondary" width="36px" />,
-    background: theme.colors.background,
-    borderColor: theme.colors.cardBorder,
   }
 
   const TradesCardData: IconCardData = {
     icon: <SwapIcon color="primary" width="36px" />,
-    background: theme.colors.background,
-    borderColor: theme.colors.cardBorder,
   }
 
   const StakedCardData: IconCardData = {
     icon: <ChartIcon color="failure" width="36px" />,
-    background: theme.colors.background,
-    borderColor: theme.colors.cardBorder,
   }
 
   return (
